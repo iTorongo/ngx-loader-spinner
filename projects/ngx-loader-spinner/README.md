@@ -1,24 +1,54 @@
-# NgxLoaderSpinner
+# ngx-loader-spinner
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+`ngx-loader-spinner` is a loader/spinner for angular application.
 
-## Code scaffolding
+## Features
+* Loader with backdrop
+* Show and hide method
+* Can be used from any component
+* Customize functionality
 
-Run `ng generate component component-name --project ngx-loader-spinner` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-loader-spinner`.
-> Note: Don't forget to add `--project ngx-loader-spinner` or else it will be added to the default project in your `angular.json` file. 
+## Installation
 
-## Build
+* `npm install ngx-loader-spinner --save`
 
-Run `ng build ngx-loader-spinner` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Publishing
+* import { NgxLoaderSpinnerModule } from 'ngx-loader-spinner';
 
-After building your library with `ng build ngx-loader-spinner`, go to the dist folder `cd dist/ngx-loader-spinner` and run `npm publish`.
+* add `NgxLoaderSpinnerModule` to the imports of your NgModule
 
-## Running unit tests
+```ts
+// app.module.ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
 
-Run `ng test ngx-loader-spinner` to execute the unit tests via [Karma](https://karma-runner.github.io).
+import { NgxLoaderSpinnerModule } from 'ngx-loader-spinner';
 
-## Further help
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    NgxLoaderSpinnerModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+
+And you are good to go...
+
+Use it in your `app.component.html`
+
+````
+<ngx-loader-spinner></ngx-loader-spinner>
+
+````
+
+Inject `NgxLoaderSpinnerService` in your component constructor.
+Show or hide the loader by using `NgxLoaderSpinnerService.show()` and `NgxLoaderSpinnerService.hide()`
