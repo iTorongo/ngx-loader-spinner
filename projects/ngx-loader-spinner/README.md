@@ -14,7 +14,7 @@
 
 ## Usage
 
-* import { NgxLoaderSpinnerModule } from 'ngx-loader-spinner';
+* `import { NgxLoaderSpinnerModule } from 'ngx-loader-spinner';`
 
 * add `NgxLoaderSpinnerModule` to the imports of your NgModule
 
@@ -47,8 +47,7 @@ Use it in your `app.component.html`
 
 ````
 <ngx-loader-spinner></ngx-loader-spinner>
-
 ````
 
-Inject `NgxLoaderSpinnerService` in your component constructor.
+Inject `NgxLoaderSpinnerService` in your component constructor.<br>
 Show or hide the loader by using `NgxLoaderSpinnerService.show()` and `NgxLoaderSpinnerService.hide()`
